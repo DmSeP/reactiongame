@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Reaction training</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Reaction training</h1>
+      <h3>Ready to start the game?</h3>
+      <a href="#" class="start" id="start">YES!</a>
+    </div>
+
+    <div class="screen">
+      <h1>Choose a time</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="10">10 sec</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">20 sec</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="30">30 sec</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="60">60 sec</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen">
+      <h3>Time: <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+      <button class="retry-btn hide" id="retry">Retry</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
