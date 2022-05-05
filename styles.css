@@ -111,10 +111,10 @@ h3 {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-width: 100px;
-  min-height: 100px;
-  width: 400px;
-  height: 400px;
+  min-width: 10vh;
+  min-height: 10vh;
+  width: 50vh;
+  height: 50vh;
 
   background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   box-shadow: 0 0 20px #16d9e3;
