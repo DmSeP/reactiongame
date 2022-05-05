@@ -113,8 +113,8 @@ h3 {
   position: relative;
   min-width: 100px;
   min-height: 100px;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
 
   background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
   box-shadow: 0 0 20px #16d9e3;
