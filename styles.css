@@ -121,6 +121,8 @@ h3 {
   border: #16d9e3 solid 1px;
   border-radius: 30px;
   overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 30px;
 }
 
