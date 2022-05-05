@@ -5,11 +5,9 @@ const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const retry = document.querySelector('#retry')
 
-const colors = ['#FFFF00', '#FFFF00', '#00FF00', '#00FF00']
+const colors = ['#FFFF00', '#FFFF00', '#00FF00', '#00FF00', '#FF69B4']
 let time = 0
 let score = 0
-
-
 
 let timerID = 0
 
@@ -21,7 +19,7 @@ startBtn.addEventListener('click', (event) => {
 timeList.addEventListener('click', (event) => {
   if (event.target.classList.contains('time-btn')) {
     time = parseInt(event.target.getAttribute('data-time'))
-   
+
     screens[1].classList.add('up')
     startGame()
   }
@@ -34,9 +32,8 @@ board.addEventListener('click', (event) => {
   }
 })
 retry.addEventListener('click', (event) => {
-  // const prime = document.querySelector('.primary')
-  // prime.remove()
   screens[1].classList.remove('up')
+  retry.classList.add('hide')
 })
 
 function startGame() {
@@ -49,28 +46,25 @@ function startGame() {
     console.log('CLEARINTERVAL')
   }, time * 1000)
   createRandomCircle()
-  timeEl.parentNode.classList.remove('hide')
+  timeEl.parentNode.classList.remove('hideTime')
 
   setTime(time)
 }
 function decreaseTime() {
-  //if (time === 0) {
-  // finishGame()
-  //} else {
   let current = --time
   if (current < 10) {
     current = `0${current}`
   }
   setTime(current)
-  // }
 }
 
 function setTime(value) {
   timeEl.innerHTML = `00:${value}`
 }
 function finishGame() {
-  timeEl.parentNode.classList.add('hide')
+  timeEl.parentNode.classList.add('hideTime')
   retry.classList.remove('hide')
+
   board.innerHTML = `<h1>Score: <span class="primary">${score}</span></h1>`
 }
 
